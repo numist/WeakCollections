@@ -3,10 +3,18 @@
 //  WeakCollectionsTests
 //
 //  Created by Scott Perry on 06/03/13.
-//  Copyright (c) 2013 Scott Perry. All rights reserved.
+//  Copyright © 2013 Scott Perry.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "WeakCollectionsTests.h"
+
+#import <WeakCollections/WeakCollections.h>
 
 @implementation WeakCollectionsTests
 
@@ -24,9 +32,36 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBasicArray
 {
-    STFail(@"Unit tests are not implemented yet in WeakCollectionsTests");
+    WCWeakArray *array = [WCWeakArray weakArray];
+    [array addReference:@(4)];
+    [array addReference:nil];
+    STAssertEquals((NSUInteger)2, [array count], @"");
+    NSArray *objs = [array allObjects];
+    STAssertEquals((NSUInteger)1, [objs count], @"");
+    [array compact];
+    STAssertEquals((NSUInteger)1, [array count], @"");
+}
+
+- (void)testBasicDictionary
+{
+    WCWeakDictionary *dict = [WCWeakDictionary weakDictionary];
+    [dict setReference:@(4) forKey:@"test1"];
+    [dict setReference:nil forKey:@"test2"];
+    
+    STAssertEquals((NSUInteger)2, [dict count], @"");
+    
+    NSArray *objs = [dict allValues];
+    STAssertEquals((NSUInteger)1, [objs count], @"");
+    
+    objs = [dict allKeys];
+    STAssertEquals((NSUInteger)2, [objs count], @"");
+    
+    [dict compact];
+    STAssertEquals((NSUInteger)1, [dict count], @"");
+    
+    STAssertEqualObjects(@(4), [dict referenceForKey:@"test1"], @"");
 }
 
 @end

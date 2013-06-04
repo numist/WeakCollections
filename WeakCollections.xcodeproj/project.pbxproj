@@ -15,6 +15,13 @@
 		BC3B3B3D175D7277002AD452 /* WeakCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3B3B1F175D7277002AD452 /* WeakCollections.framework */; };
 		BC3B3B43175D7277002AD452 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC3B3B41175D7277002AD452 /* InfoPlist.strings */; };
 		BC3B3B46175D7277002AD452 /* WeakCollectionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3B3B45175D7277002AD452 /* WeakCollectionsTests.m */; };
+		BC3B3B51175D728C002AD452 /* WCWeakValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3B3B4F175D728C002AD452 /* WCWeakValue.h */; settings = {ATTRIBUTES = (); }; };
+		BC3B3B52175D728C002AD452 /* WCWeakValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3B3B50175D728C002AD452 /* WCWeakValue.m */; };
+		BC3B3B55175D7362002AD452 /* WCWeakArray.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3B3B53175D7362002AD452 /* WCWeakArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC3B3B56175D7362002AD452 /* WCWeakArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3B3B54175D7362002AD452 /* WCWeakArray.m */; };
+		BC3B3B57175D7453002AD452 /* WeakCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3B3B2F175D7277002AD452 /* WeakCollections.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC3B3B5A175D748D002AD452 /* WCWeakDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3B3B58175D748D002AD452 /* WCWeakDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC3B3B5B175D748D002AD452 /* WCWeakDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3B3B59175D748D002AD452 /* WCWeakDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,12 @@
 		BC3B3B42175D7277002AD452 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC3B3B44175D7277002AD452 /* WeakCollectionsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakCollectionsTests.h; sourceTree = "<group>"; };
 		BC3B3B45175D7277002AD452 /* WeakCollectionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakCollectionsTests.m; sourceTree = "<group>"; };
+		BC3B3B4F175D728C002AD452 /* WCWeakValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeakValue.h; sourceTree = "<group>"; };
+		BC3B3B50175D728C002AD452 /* WCWeakValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeakValue.m; sourceTree = "<group>"; };
+		BC3B3B53175D7362002AD452 /* WCWeakArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeakArray.h; sourceTree = "<group>"; };
+		BC3B3B54175D7362002AD452 /* WCWeakArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeakArray.m; sourceTree = "<group>"; };
+		BC3B3B58175D748D002AD452 /* WCWeakDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeakDictionary.h; sourceTree = "<group>"; };
+		BC3B3B59175D748D002AD452 /* WCWeakDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeakDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,12 @@
 		BC3B3B28175D7277002AD452 /* WeakCollections */ = {
 			isa = PBXGroup;
 			children = (
+				BC3B3B53175D7362002AD452 /* WCWeakArray.h */,
+				BC3B3B54175D7362002AD452 /* WCWeakArray.m */,
+				BC3B3B58175D748D002AD452 /* WCWeakDictionary.h */,
+				BC3B3B59175D748D002AD452 /* WCWeakDictionary.m */,
+				BC3B3B4F175D728C002AD452 /* WCWeakValue.h */,
+				BC3B3B50175D728C002AD452 /* WCWeakValue.m */,
 				BC3B3B2F175D7277002AD452 /* WeakCollections.h */,
 				BC3B3B30175D7277002AD452 /* WeakCollections.m */,
 				BC3B3B29175D7277002AD452 /* Supporting Files */,
@@ -153,6 +172,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3B3B51175D728C002AD452 /* WCWeakValue.h in Headers */,
+				BC3B3B55175D7362002AD452 /* WCWeakArray.h in Headers */,
+				BC3B3B57175D7453002AD452 /* WeakCollections.h in Headers */,
+				BC3B3B5A175D748D002AD452 /* WCWeakDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +186,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC3B3B49175D7277002AD452 /* Build configuration list for PBXNativeTarget "WeakCollections" */;
 			buildPhases = (
+				BC3B3B1C175D7277002AD452 /* Headers */,
 				BC3B3B1A175D7277002AD452 /* Sources */,
 				BC3B3B1B175D7277002AD452 /* Frameworks */,
-				BC3B3B1C175D7277002AD452 /* Headers */,
 				BC3B3B1D175D7277002AD452 /* Resources */,
 			);
 			buildRules = (
@@ -264,6 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3B3B31175D7277002AD452 /* WeakCollections.m in Sources */,
+				BC3B3B52175D728C002AD452 /* WCWeakValue.m in Sources */,
+				BC3B3B56175D7362002AD452 /* WCWeakArray.m in Sources */,
+				BC3B3B5B175D748D002AD452 /* WCWeakDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
